@@ -1,0 +1,15 @@
+
+Pale Goldenrod
+#EEC8B0
+
+Indian Red
+#C4746C
+
+Dark Slate Gray
+#293F4F
+
+Rosy Brown
+#A08581
+
+Slate Gray
+#716D75
