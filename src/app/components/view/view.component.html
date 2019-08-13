@@ -1,0 +1,26 @@
+<div class ="upper-container">
+    <div class = "grid-container">                
+        <app-upload class="upload-button"></app-upload>
+        <p class = "day">Today is {{today}}</p>
+        <div class= "button-group">            
+            <button class = "buttons">Transit</button>
+            <button class = "buttons">Bike</button>
+            <button class = "buttons">Walk</button>
+            <button class = "buttons">Drive</button>
+        </div>
+        <!-- <div class="lower-block"> -->
+            <div class = "left2">
+                <div class = "class-header">
+                    <p>{{display}} Classes</p>
+                </div>
+                <div class = "class-body">
+                    <div class = "class-group" *ngFor = "let item of classes">
+                        <p>{{item.name}}: {{item.time}}</p>
+                        <p>Location: {{item.location}}</p>
+                    </div>
+                </div>
+            </div>
+            <canvas class = "right"></canvas>
+        <!-- </div> -->
+    </div>
+</div>

@@ -2,9 +2,8 @@
     <div class ="left">        
         <p>        
             <a routerLink="/home" (click) = "select('Home')" [ngClass] = "{'selected': selectedItem === 'Home'}">Home</a>
-            <a (click) = "select('Upload')" [ngClass] = "{'selected': selectedItem === 'Upload'}">Upload</a>
-            <a (click) = "select('View')" [ngClass] = "{'selected': selectedItem === 'View'}">View</a>
-            <a (click) = "select('About')" [ngClass] = "{'selected': selectedItem === 'About'}">About</a>
+            <a routerLink="/view" (click) = "select('View')" [ngClass] = "{'selected': selectedItem === 'View'}">View</a>
+            <a routerLink="/about" (click) = "select('About')" [ngClass] = "{'selected': selectedItem === 'About'}">About</a>
         </p>
     </div>
     <div class = "right">        

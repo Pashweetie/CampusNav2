@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { MenuServiceService } from './../../services/menu-service.service';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,17 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu-component.component.scss']
 })
 export class MenuComponentComponent implements OnInit {
-  selectedItem = '';
-  constructor(private router: Router) {
-  }
-  ngOnInit() {
-    console.log(this.router.url);
+  selectedItem;
+  constructor(private menuService: MenuServiceService, private router: Router) {
+    
     switch (this.router.url) {
       case '/home':
         this.selectedItem = 'Home';
         break;
       case '/':
-          this.selectedItem = 'Home';
+          this.selectedItem = '';
           break;
       case '/view':
         this.selectedItem = 'View';
@@ -36,7 +35,13 @@ export class MenuComponentComponent implements OnInit {
         break;
     }
   }
+  ngOnInit() {
+    this.menuService.getEmittedValue().subscribe(item => this.selectedItem = item);
+  }
   select(value) {
     this.selectedItem = value;
+  }
+  recieveItem($event) {
+    this.selectedItem = $event;
   }
 }

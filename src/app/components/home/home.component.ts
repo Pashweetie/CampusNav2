@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { MenuServiceService } from './../../services/menu-service.service';
+import { Component, Output, OnInit, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
-
+  constructor(private menuService: MenuServiceService) { }
   ngOnInit() {
   }
-
+  select(value) {
+    this.menuService.select(value);
+  }
+  
 }

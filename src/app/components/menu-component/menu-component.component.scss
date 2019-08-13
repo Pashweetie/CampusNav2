@@ -16,8 +16,10 @@
     background: linear-gradient(180deg, #C4746C 1.04%, rgba(176, 125, 120, 0.765249) 83.33%, rgba(160, 133, 129, 0.575212) 100%);
 }
 
-.bar{
+.bar>div>p{
     font-size: 18px;
+}
+.bar{
     overflow: auto;
 }
 .right{
